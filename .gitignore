@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment and sensitive files
+.env
+.env.*
+*.env
+server/.env
+prompt.txt
+
+# Production build artifacts
+dist/
+client/dist/
+build/
+
+# Uploaded user media
+server/uploads/*
+!server/uploads/.gitkeep
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

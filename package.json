@@ -1,0 +1,20 @@
+{
+  "name": "civicpulse-urban-management-system",
+  "version": "1.0.0",
+  "description": "MERN Stack Urban Grievance Management & Public Accountability System",
+  "scripts": {
+    "dev:server": "cd server && node --watch server.js",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && node seed.js --force"
+  },
+  "keywords": [
+    "mern",
+    "civic-tech",
+    "urban-management",
+    "wall-of-shame",
+    "leaderboard",
+    "ai-severity"
+  ],
+  "author": "",
+  "license": "ISC"
+}
