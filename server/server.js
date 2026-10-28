@@ -38,6 +38,21 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/workers', workerRoutes);
 app.use('/api/auth', authRoutes);
 
+// Root / Welcome endpoint
+app.get('/', (req, res) => {
+  res.json({
+    message: 'CivicPulse API is running successfully!',
+    status: 'healthy',
+    endpoints: {
+      health: '/api/health',
+      complaints: '/api/complaints',
+      workers: '/api/workers',
+      leaderboard: '/api/leaderboard',
+      wallOfShame: '/api/wall-of-shame',
+    },
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
@@ -83,3 +98,5 @@ mongoose
     console.error('Failed to connect to MongoDB:', err.message);
     process.exit(1);
   });
+
+export default app;
